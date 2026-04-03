@@ -14,6 +14,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.debug * {
   outline: 1px solid red;
 }
 
@@ -24,10 +27,14 @@ body {
   font-family: monasans;
 }
 
-main {
+main,
+header {
   width: 100%;
+}
+
+main {
   background: #fff;
-  padding: 1rem 3.5rem;
+  padding: 0.2rem 1rem;
 }
 main .hero {
   width: 100%;
@@ -39,7 +46,9 @@ main .hero {
 main .hero .hero-left,
 main .hero .hero-right {
   flex: 1;
-  padding-right: 5%;
+}
+main .hero .hero-left {
+  padding: 2rem 3.2rem;
 }
 main .hero .hero-left h1,
 main .hero .hero-left h3 {
@@ -60,7 +69,7 @@ main .hero .hero-left .links {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 1.2rem;
   color: #000;
 }
 main .hero .hero-left .links a {
@@ -120,20 +129,20 @@ main .hero .hero-left .tags h5 {
   padding: 0.2rem 0.5rem;
 }
 main .hero .hero-right {
-  padding: 0.7rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
 main .hero .hero-right video {
-  width: 100%;
-  border-radius: 25px;
+  width: 81%;
+  border-radius: 1.5rem;
 }
 main .briefinfo {
-  background: #f3f3f6;
+  background: #F8F8FC;
   width: 100%;
   border-radius: 1rem;
   padding: 1rem 1rem;
+  margin-bottom: 1rem;
 }
 main .briefinfo button {
   background: #fff;
@@ -144,7 +153,57 @@ main .briefinfo button {
   margin-right: 2rem;
 }
 main .briefinfo button i {
-  color: #956BCD;
+  color: #956bcd;
+}
+main .projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+main .projects .project-card {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+main .projects .project-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+main .projects .project-card .options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9E9EA7;
+}
+main .projects .project-card .options .options-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+main .projects .project-card .options .options-left img {
+  width: 2rem;
+}
+main .projects .project-card .options .options-left h4 {
+  font-weight: 600;
+  color: #16162B;
+}
+main .projects .project-card .options .options-left .tag {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: #ecebf0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.2rem;
+  color: #524b63;
+}
+main .projects .project-card .options .options-left .tag:hover {
+  background: #d8d6d5;
+  cursor: pointer;
+}
+main .projects .project-card .options .options-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 header {
@@ -153,7 +212,6 @@ header {
   justify-content: space-between;
   color: #fff;
   height: 3.8rem;
-  width: 100%;
   padding: 2.8rem 3.5rem;
   background: #fff;
 }
@@ -202,9 +260,4 @@ footer {
   background: #000;
   color: #fff;
   height: 4rem;
-}
-
-article {
-  height: 400px;
-  background-color: #956BCD;
 }/*# sourceMappingURL=style.css.map */

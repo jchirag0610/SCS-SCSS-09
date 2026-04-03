@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+.debug * {
+    outline: 1px solid red;
+}
+
 html,
 body {
     height: 100%;
@@ -28,19 +32,19 @@ body {
 
 @mixin flex-align($cross-axis, $main-axis) {
     display: flex;
-    align-items: $cross-axis ;
-    justify-content: $main-axis ;
+    align-items: $cross-axis;
+    justify-content: $main-axis;
 
 }
 
 main,
 header {
-    width: 100%:
+    width: 100%;
 }
 
 main {
     background: #fff;
-    padding: 1rem 3.5rem;
+    padding: 0.2rem 1rem;
 
 
     .hero {
@@ -52,11 +56,11 @@ main {
         .hero-left,
         .hero-right {
             flex: 1;
-            padding-right: 5%;
         }
 
 
         .hero-left {
+            padding: 2rem 3.2rem;
 
             h1,
             h3 {
@@ -78,7 +82,7 @@ main {
             .links {
                 margin-top: 2rem;
                 @include flex-align(center, flex-start);
-                gap: 20px;
+                gap: 1.2rem;
                 color: #000;
 
 
@@ -150,22 +154,23 @@ main {
 
 
         .hero-right {
-            padding: 0.7rem;
             @include flex-align(flex-start, center);
 
+
             video {
-                width: 100%;
-                border-radius: 25px;
+                width: 81%;
+                border-radius: 1.5rem;
             }
         }
 
     }
 
     .briefinfo {
-        background: #f3f3f6;
+        background: #F8F8FC;
         width: 100%;
         border-radius: 1rem;
         padding: 1rem 1rem;
+        margin-bottom: 1rem;
 
         button {
             background: #fff;
@@ -176,9 +181,66 @@ main {
             margin-right: 2rem;
 
             i {
-                color: #956BCD;
+                color: #956bcd;
             }
 
+        }
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+
+        .project-card {
+            width: 100%;
+            border-radius: 0.50rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.50rem;
+            }
+
+            .options {
+                @include flex-align(center, space-between);
+                color: #9E9EA7;
+
+                .options-left {
+                    @include flex-align(center, flex-start);
+                    gap: 0.7rem;
+
+                    img {
+                        width: 2rem;
+                    }
+
+                    h4 {
+                        font-weight: 600;
+                        color: #16162B;
+                    }
+
+                    .tag {
+                        font-size: 0.7rem;
+                        font-weight: bold;
+                        background: #ecebf0;
+                        padding: 0.4rem 0.6rem;
+                        border-radius: 0.2rem;
+                        color: #524b63;
+                    }
+
+                    .tag:hover {
+                        background: #d8d6d5;
+                        cursor: pointer;
+                    }
+                }
+
+                .options-right {
+
+                    @include flex-align(center, flex-start);
+                    gap: 1rem;
+                }
+
+
+            }
         }
     }
 }
@@ -236,9 +298,4 @@ footer {
     background: #000;
     color: #fff;
     height: 4rem;
-}
-
-article {
-    height: 400px;
-    background-color: #956BCD;
 }
