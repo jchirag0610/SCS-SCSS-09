@@ -275,6 +275,7 @@ main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 2rem;
 
+
         .project-card {
             width: 100%;
             border-radius: 0.50rem;
@@ -284,7 +285,7 @@ main {
                 overflow: hidden;
 
                 img {
-                    height: 20rem;
+                    height: 16rem;
                     border-radius: 0.5rem;
                     transition: all 0.3s ease;
                     width: 100%;
@@ -297,20 +298,25 @@ main {
 
                 .hover-info {
                     @include flex-align(center, space-between);
-
-                    background: linear-gradient(transparent, #00000066);
-                    height: 10rem;
+                    background: linear-gradient(transparent, #00000099);
+                    height: 7rem;
                     position: absolute;
-                    bottom: -10rem;
+                    bottom: -7rem;
                     width: 100%;
                     padding: 0.5rem 1rem;
                     color: #fff;
-                    border-radius:0.5rem;
+                    border-radius: 0.5rem;
+
                 }
 
                 h3 {
                     font-weight: 500;
                     font-size: 1rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 8rem;
+
                 }
 
                 .icons {
@@ -320,7 +326,7 @@ main {
                         background: #fff;
                         color: #000;
                         margin: 0rem 0.5rem;
-                        font-size:1.5rem;
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -351,16 +357,29 @@ main {
                     }
 
                     .tag {
+
                         font-size: 0.6rem;
                         font-weight: bold;
-                        background: #ecebf0;
                         padding: 0.3rem 0.8rem;
                         border-radius: 0.2rem;
                         color: #524b63;
                     }
 
-                    .tag:hover {
+                    .tag-pro {
+                        background: #ecebf0;
+                    }
+
+                    .tag-pro-plus {
+                        background: #524B63;
+                        color: #fff;
+                    }
+
+                    .tag-pro:hover {
                         background: #d8d6d5;
+                        cursor: pointer;
+                    }
+                    .tag-pro-plus:hover {
+                        background: #524B63dd;
                         cursor: pointer;
                     }
                 }
@@ -412,6 +431,7 @@ main {
         @include flex-align(center, flex-start);
         gap: 2rem;
         overflow-x: auto;
+
 
         .carousel-card-item {
             border-radius: 0.8rem;

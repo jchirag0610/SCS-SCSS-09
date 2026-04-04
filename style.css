@@ -232,7 +232,7 @@ main .projects .project-card .media {
   overflow: hidden;
 }
 main .projects .project-card .media img {
-  height: 20rem;
+  height: 16rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   width: 100%;
@@ -245,10 +245,10 @@ main .projects .project-card .media .hover-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
-  height: 10rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  height: 7rem;
   position: absolute;
-  bottom: -10rem;
+  bottom: -7rem;
   width: 100%;
   padding: 0.5rem 1rem;
   color: #fff;
@@ -257,6 +257,10 @@ main .projects .project-card .media .hover-info {
 main .projects .project-card .media h3 {
   font-weight: 500;
   font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 8rem;
 }
 main .projects .project-card .media .icons i {
   border-radius: 2rem;
@@ -295,13 +299,23 @@ main .projects .project-card .options .options-left h4 {
 main .projects .project-card .options .options-left .tag {
   font-size: 0.6rem;
   font-weight: bold;
-  background: #ecebf0;
   padding: 0.3rem 0.8rem;
   border-radius: 0.2rem;
   color: #524b63;
 }
-main .projects .project-card .options .options-left .tag:hover {
+main .projects .project-card .options .options-left .tag-pro {
+  background: #ecebf0;
+}
+main .projects .project-card .options .options-left .tag-pro-plus {
+  background: #524B63;
+  color: #fff;
+}
+main .projects .project-card .options .options-left .tag-pro:hover {
   background: #d8d6d5;
+  cursor: pointer;
+}
+main .projects .project-card .options .options-left .tag-pro-plus:hover {
+  background: rgba(82, 75, 99, 0.8666666667);
   cursor: pointer;
 }
 main .projects .project-card .options .options-right {
