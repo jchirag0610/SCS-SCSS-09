@@ -264,6 +264,43 @@ main .projects .project-card .options .options-right {
   justify-content: flex-start;
   gap: 1rem;
 }
+main .signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0rem;
+}
+main .signup button {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+main .signup button:hover {
+  background: #3A3546;
+  cursor: pointer;
+}
+main .carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  overflow-x: auto;
+}
+main .carousel .carousel-card-item {
+  border-radius: 0.8rem;
+  flex: 0 0 15rem;
+}
+main .carousel .carousel-card-item img {
+  border-radius: 0.8rem;
+  width: 100%;
+}
+main .carousel .carousel-card-item h4 {
+  font-size: 0.9rem;
+  padding: 1rem 0rem;
+  color: #524b63;
+}
 
 header {
   display: flex;

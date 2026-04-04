@@ -320,6 +320,46 @@ main {
             }
         }
     }
+
+    .signup {
+        @include flex-align(center, center);
+        padding: 3rem 0rem;
+
+        button {
+            background: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 2rem;
+        }
+
+        button:hover {
+            background: #3A3546;
+            cursor: pointer;
+        }
+    }
+
+    .carousel {
+        @include flex-align(center, flex-start);
+        gap: 2rem;
+        overflow-x: auto;
+
+        .carousel-card-item {
+            border-radius: 0.8rem;
+            flex: 0 0 15rem;
+
+            img {
+                border-radius: 0.8rem;
+                width:100%;
+            }
+
+            h4 {
+                font-size: 0.9rem;
+                padding: 1rem 0rem;
+                color: #524b63
+            }
+        }
+    }
 }
 
 header {
