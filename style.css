@@ -155,6 +155,65 @@ main .briefinfo button {
 main .briefinfo button i {
   color: #956bcd;
 }
+main .categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0rem;
+}
+main .categories .dropdown select {
+  border: 1px solid #E9E9EB;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+}
+main .categories .dropdown select:focus {
+  outline: none;
+  border: 1px solid #E9E9EB;
+}
+main .categories .dropdown select:hover {
+  border: 1px solid #E9E9EB;
+}
+main .categories .dropdown option {
+  border: 1px solid #E9E9EB;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: #E9E9EB;
+}
+main .categories .category-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+main .categories .category-options h5 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+main .categories .category-options h5:nth-child(1) {
+  background: #eeeef0;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+}
+main .categories .category-options h5:hover {
+  color: #6d6d70;
+  cursor: pointer;
+}
+main .categories .category-options h5:nth-child(1):hover {
+  color: #000;
+  background: #E9E9EB;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+main .categories .filter button {
+  border: 1px solid #E9E9EB;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+}
+main .categories .filter button i {
+  margin-right: 0.2rem;
+}
 main .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
